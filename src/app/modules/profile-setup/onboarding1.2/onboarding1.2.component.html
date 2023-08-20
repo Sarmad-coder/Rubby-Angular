@@ -1,0 +1,466 @@
+<!-- wherver you want to reaply the sideBar the first div with class lg:h-full covers the whole page  -->
+
+<div class="flex"></div>
+  <!-- sideBar  -->
+  <!-- <div *ngIf="edit" class="hidden w-[142px] flex-col items-center border-[3px] border-gray-200 py-7 lg:flex min-h-screen">
+    <div class="text-base font-semibold text-neutral-800">RUUBY</div>
+    <div class="mt-24 flex flex-col gap-6">
+      <div routerLink="/onboarding"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        1
+      </div>
+
+      <div routerLink="/onboarding/onboarding-1.2"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        2
+      </div>
+
+
+      <div routerLink="/onboarding/contact"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        3
+      </div>
+
+
+      <div routerLink="/onboarding/work"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        4
+      </div>
+      <div routerLink="/onboarding/education"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        5
+      </div>
+      <div routerLink="/onboarding/media"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        6
+      </div>
+      <div routerLink="/onboarding/onboarding-1.3"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        7
+      </div>
+      <div routerLink="/onboarding/onboarding-1.4"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full bg-[#63C076] font-semibold text-white">
+        8
+      </div>
+
+    </div>
+    <div></div>
+  </div>
+  <div *ngIf="!edit" class="hidden w-[142px] flex-col items-center border-[3px] border-gray-200 py-7 lg:flex min-h-screen">
+    <div class="text-base font-semibold text-neutral-800">RUUBY</div>
+    <div class="mt-24 flex flex-col gap-6">
+      <div 
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        1
+      </div>
+
+      <div 
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        2
+      </div>
+
+
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        3
+      </div>
+
+
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        4
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        5
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        6
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        7
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full bg-[#63C076] font-semibold text-white">
+        8
+      </div>
+
+    </div>
+    <div></div>
+  </div> -->
+  <!-- main page  -->
+  <div class="mx-auto max-w-[550px] mt-4">
+    <!-- Title  -->
+    <div class="h-16 bg-slate-100 px-4 flex items-center gap-2 rounded-md shadow-sm">
+      <div class="cursor-pointer" routerLink="/onboarding/media">
+          <svg width="32" height="33" fill="none" stroke="#000" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.89 11.166 9.334 16.5m0 0 5.556 5.333M9.334 16.5h13.333" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+      </div>
+      <div class="flex flex-col justify-center">
+          <p class="text-2xl font-semibold">Page Skin</p>
+          <p class="text-xs font-semibold text-gray-300">Choose a page skin to change how your page looks</p>
+      </div>
+  </div>
+
+    <!-- themes  -->
+    <div class="mt-5">
+      <div class="flex gap-10 flex-wrap sm:justify-start justify-center">
+        <!-- 1st theme  -->
+        <div>
+          <p class="text-sm font-semibold">1st Theme</p>
+          <div class="theme mt-2 flex h-80 w-56 flex-col items-center rounded-2xl border-4 p-2"
+            [style.border-color]="selectedDiv === 'business' ? 'black' : ''" id="business"
+            (click)="selectSkin('business')" name="box">
+            <div class="w-48">
+              <div class="mt-1 h-28 w-full rounded-md bg-gray-500"></div>
+
+              <div class="mt-4 flex gap-1">
+                <div class="h-10 w-full rounded-sm bg-gray-500"></div>
+                <div class="h-10 w-full rounded-sm bg-gray-500"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-4 h-2 w-5 rounded-md bg-gray-500"></div>
+                <div class="mt-4 h-2 w-full rounded-md bg-gray-500"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-4 h-2 w-10 rounded-md bg-gray-500"></div>
+                <div class="mt-4 flex w-full gap-1">
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                </div>
+              </div>
+
+              <!-- <div class="w-full">
+                  <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-16 w-full rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-full rounded-md bg-gray-500"></div>
+                </div>
+
+                <div class="w-full">
+                  <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                </div> -->
+            </div>
+            <!-- <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div> -->
+          </div>
+        </div>
+
+        <!-- 2nd theme  -->
+        <div>
+          <p class="text-sm font-semibold">2nd Theme</p>
+          <div class="theme mt-2 flex h-80 w-56 flex-col items-center rounded-2xl border-4 p-2"
+            [style.border-color]="selectedDiv === 'minimal' ? 'black' : ''" id="minimal" (click)="selectSkin('minimal')"
+            name="box">
+            <div class="w-48">
+              <div class="relative">
+                <div class="mt-2 h-28 w-full rounded-md bg-gray-500"></div>
+                <div class="absolute left-0 right-0 top-20 m-auto h-14 w-14 rounded-md border border-white bg-gray-500">
+                </div>
+              </div>
+              <div class="flex gap-1">
+                <div class="mt-8 h-10 w-full rounded-sm bg-gray-500"></div>
+                <div class="mt-8 h-10 w-full rounded-sm bg-gray-500"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-3 h-2 w-5 rounded-md bg-gray-500"></div>
+                <div class="mt-3 h-2 w-full rounded-md bg-gray-500"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-3 h-2 w-10 rounded-md bg-gray-500"></div>
+                <div class="mt-3 flex w-full gap-1">
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                  <div class="h-6 w-6 bg-gray-500"></div>
+                </div>
+              </div>
+
+              <!-- <div class="w-full">
+                  <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-16 w-full rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-full rounded-md bg-gray-500"></div>
+                </div> -->
+
+              <!-- <div class="w-full">
+                  <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                  <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                </div> -->
+            </div>
+            <!-- <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div> -->
+          </div>
+        </div>
+
+        <!-- 3rd theme  -->
+        <div>
+          <p class="text-sm font-semibold">3rd Theme</p>
+          <div class="theme mt-2 flex h-80 w-56 flex-col items-center rounded-2xl border-4 p-2"
+            [style.border-color]="selectedDiv === 'light' ? 'black' : ''" id="light" (click)="selectSkin('light')"
+            name="box">
+            <div class="flex w-48 py-4 justify-center rounded-md border">
+              <div class="w-40">
+                <div>
+                  <div class="mx-auto h-20 w-20 rounded-full bg-gray-500"></div>
+                </div>
+
+                <div class="flex w-full flex-col items-center">
+                  <div class="mt-4 h-2 w-5 rounded-md bg-gray-500"></div>
+                  <div class="mt-4 h-2 w-10 rounded-md bg-gray-500"></div>
+                </div>
+
+                <div class="w-full">
+                  <div class="mt-4 flex w-full justify-center gap-1">
+                    <div class="h-4 w-4 bg-gray-500"></div>
+                    <div class="h-4 w-4 bg-gray-500"></div>
+                    <div class="h-4 w-4 bg-gray-500"></div>
+                    <div class="h-4 w-4 bg-gray-500"></div>
+                    <div class="h-4 w-4 bg-gray-500"></div>
+                  </div>
+                </div>
+
+                <div class="mt-4 flex gap-7">
+                  <div class="h-8 w-full rounded-sm bg-gray-500"></div>
+                  <div class="h-8 w-full rounded-sm bg-gray-500"></div>
+                </div>
+
+                <div class="w-full">
+                  <div class="mt-4 h-2 w-5 rounded-md bg-gray-500"></div>
+                  <div class="mt-4 h-2 w-full rounded-md bg-gray-500"></div>
+                </div>
+
+                <!-- <div class="w-full">
+                <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+                <div class="mt-2 h-16 w-full rounded-md bg-gray-500"></div>
+                <div class="mt-2 h-1 w-full rounded-md bg-gray-500"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+                <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+              </div> -->
+              </div>
+            </div>
+            <!-- <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div> -->
+          </div>
+        </div>
+
+        <!-- 4th theme  -->
+        <div>
+          <p class="text-sm font-semibold">4th Theme</p>
+          <div class="theme mt-2 flex h-80 w-56 flex-col items-center rounded-2xl border-4 p-2" id="social"
+            [style.border-color]="selectedDiv === 'social' ? 'black' : ''" (click)="selectSkin('social')" name="box">
+            <div class="w-48">
+              <div class="relative">
+                <div class="mt-2 h-20 w-full rounded-md bg-gray-500"></div>
+                <div class="absolute top-12 left-7 h-14 w-14 rounded-full border border-white bg-gray-500"></div>
+              </div>
+
+              <div class="mt-2 w-full">
+                <div class="flex w-full justify-end gap-1">
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                </div>
+              </div>
+
+              <div class="mt-4 ml-3">
+                <div class="mt-4 h-2 w-5 rounded-md bg-gray-500"></div>
+                <div class="mt-4 h-2 w-10 rounded-md bg-gray-500"></div>
+              </div>
+
+              <div class="mt-4 ml-3 flex gap-1">
+                <div class="h-8 w-16 rounded-sm bg-gray-500"></div>
+                <div class="h-8 w-16 rounded-sm bg-gray-500"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-4 h-2 w-5 rounded-md bg-gray-500"></div>
+                <div class="mt-4 h-2 w-full rounded-md bg-gray-500"></div>
+              </div>
+
+              <!-- <div class="w-full">
+              <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-16 w-full rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-full rounded-md bg-gray-500"></div>
+            </div>
+
+            <div class="w-full">
+              <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+            </div> -->
+            </div>
+
+            <!-- <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div> -->
+          </div>
+        </div>
+
+        <!-- 5th theme  -->
+        <div>
+          <p class="text-sm font-semibold">5th Theme</p>
+          <div class="theme mt-2 flex h-80 w-56 flex-col items-center rounded-2xl border-4 p-2"
+            [style.border-color]="selectedDiv === 'post' ? 'black' : ''" id="post" (click)="selectSkin('post')"
+            name="box">
+            <div class="w-48">
+              <div class="mt-2 h-2 w-full rounded-md bg-gray-500"></div>
+              <div class="mt-3 h-2 w-full rounded-md bg-gray-500"></div>
+              <div class="mt-3 h-32 w-full rounded-md bg-gray-500"></div>
+
+              <div class="mt-4 flex justify-center gap-1">
+                <div class="h-8 w-12 rounded-sm bg-gray-500"></div>
+                <div class="h-8 w-12 rounded-sm bg-gray-500"></div>
+              </div>
+
+              <div class="mt-2 w-full">
+                <div class="flex w-full justify-center gap-1">
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                  <div class="h-4 w-4 bg-gray-500"></div>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-3 h-2 w-5 rounded-md bg-gray-500"></div>
+                <div class="mt-3 h-2 w-full rounded-md bg-gray-500"></div>
+              </div>
+
+              <!-- <div class="w-full">
+              <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-16 w-full rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-full rounded-md bg-gray-500"></div>
+            </div>
+
+            <div class="w-full">
+              <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+              <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+            </div> -->
+            </div>
+
+            <!-- <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div> -->
+          </div>
+        </div>
+
+        <!-- 6th theme  -->
+        <div>
+          <p class="text-sm font-semibold">6th Theme</p>
+          <div class="theme mt-2 flex h-80 w-56 flex-col items-center rounded-2xl border-4 p-2"
+            [style.border-color]="selectedDiv === 'card' ? 'black' : ''" id="card" (click)="selectSkin('card')"
+            name="box">
+            <div class="w-48 p-2 bg-gray-500">
+              <div class="flex">
+                <div class="h-16 w-16 rounded-full bg-white"></div>
+                <div>
+                  <div class="flex w-full flex-col ml-1">
+                    <div class="mt-2 h-2 w-10 rounded-md bg-white"></div>
+                    <div class="mt-2 h-2 w-10 rounded-md bg-white"></div>
+                  </div>
+
+                  <div class="w-full">
+                    <div class="mt-2 flex w-full gap-1 ml-1">
+                      <div class="h-4 w-4 bg-white"></div>
+                      <div class="h-4 w-4 bg-white"></div>
+                      <div class="h-4 w-4 bg-white"></div>
+                      <div class="h-4 w-4 bg-white"></div>
+                      <div class="h-4 w-4 bg-white"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-2 flex gap-1">
+                <div class="h-8 w-12 rounded-sm bg-white"></div>
+                <div class="h-8 w-12 rounded-sm bg-white"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-2 h-2 w-5 rounded-md bg-white"></div>
+                <div class="mt-2 h-2 w-full rounded-md bg-white"></div>
+              </div>
+
+              <div class="w-full">
+                <div class="mt-2 h-2 w-5 rounded-md bg-white"></div>
+                <div class="mt-2 h-24 w-full rounded-md bg-white"></div>
+                <div class="mt-2 h-2 w-full rounded-md bg-white"></div>
+              </div>
+
+              <!-- <div class="w-full">
+                <div class="mt-2 h-1 w-5 rounded-md bg-white"></div>
+                <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+                <div class="mt-2 h-1 w-10 rounded-md bg-gray-500"></div>
+              </div> -->
+            </div>
+
+            <!-- <div class="mt-2 h-1 w-5 rounded-md bg-gray-500"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- save button  -->
+    <div class="p-4 mt-7 mb-4 flex flex-wrap gap-5">
+      <button routerLink="/onboarding/media"
+        class="rounded-md py-4 sm:w-auto w-full px-4 font-semibold text-xs border border-gray-300"><svg
+          class="inline-block mr-3" width="16" height="12" viewBox="0 0 16 12" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.2752 1.15C6.47519 1.35 6.5712 1.59167 6.5632 1.875C6.55453 2.15833 6.4502 2.4 6.2502 2.6L3.4252 5.425L14.5752 5.425C14.8585 5.425 15.0962 5.521 15.2882 5.713C15.4795 5.90433 15.5752 6.14167 15.5752 6.425C15.5752 6.70833 15.4795 6.946 15.2882 7.138C15.0962 7.32933 14.8585 7.425 14.5752 7.425L3.4252 7.425L6.2752 10.275C6.47519 10.475 6.5752 10.7127 6.5752 10.988C6.5752 11.2627 6.47519 11.5 6.2752 11.7C6.0752 11.9 5.83753 12 5.5622 12C5.28753 12 5.05019 11.9 4.85019 11.7L0.275196 7.125C0.175196 7.025 0.104195 6.91667 0.0621948 6.8C0.0208616 6.68333 0.00019455 6.55833 0.00019455 6.425C0.00019455 6.29167 0.0208616 6.16667 0.0621948 6.05C0.104195 5.93333 0.175196 5.825 0.275196 5.725L4.8752 1.125C5.05853 0.941668 5.28753 0.849999 5.5622 0.849999C5.83753 0.849999 6.0752 0.950001 6.2752 1.15Z"
+            fill="#2E2E2E" />
+        </svg>
+        Go Back
+      </button>
+
+      <button class="rounded-md sm:w-auto w-full py-4 px-4 font-semibold text-xs text-white" (click)="submit()"
+        style="background: rgba(98, 194, 117, 1)">
+        <div class="flex justify-center gap-4">
+          <div *ngIf="loading" role="status">
+            <svg aria-hidden="true" class="w-4 h-4 text-gray-600 animate-spin dark:text-gray-600 fill-blue-300"
+              viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="currentColor" />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentFill" />
+            </svg>
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div>
+            It Looking great move on <svg class="inline-block ml-3" width="16" height="12" viewBox="0 0 16 12" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.3 10.85C9.1 10.65 9.004 10.4083 9.012 10.125C9.02067 9.84167 9.125 9.6 9.325 9.4L12.15 6.575H1C0.716667 6.575 0.479 6.479 0.287 6.287C0.0956668 6.09567 0 5.85833 0 5.575C0 5.29167 0.0956668 5.054 0.287 4.862C0.479 4.67067 0.716667 4.575 1 4.575H12.15L9.3 1.725C9.1 1.525 9 1.28733 9 1.012C9 0.737333 9.1 0.5 9.3 0.3C9.5 0.0999997 9.73767 0 10.013 0C10.2877 0 10.525 0.0999997 10.725 0.3L15.3 4.875C15.4 4.975 15.471 5.08333 15.513 5.2C15.5543 5.31667 15.575 5.44167 15.575 5.575C15.575 5.70833 15.5543 5.83333 15.513 5.95C15.471 6.06667 15.4 6.175 15.3 6.275L10.7 10.875C10.5167 11.0583 10.2877 11.15 10.013 11.15C9.73767 11.15 9.5 11.05 9.3 10.85Z"
+            fill="white" />
+        </svg>
+          </div>
+
+        </div>
+      </button>
+
+
+    </div>
+  </div>

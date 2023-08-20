@@ -1,0 +1,93 @@
+<div>
+
+        <!-- Main page  -->
+
+        <!-- analytics card  -->
+        <div
+                class="animate__animated animate__fadeInLeft animate__faster absolute mx-auto w-full max-w-[550px] left-0 right-0">
+
+                <div name="header" class="flex w-full justify-between h-16 items-center p-4 gap-2 bg-slate-100">
+                        <div class="flex w-full h-16 items-center p-4 gap-2">
+                                <div class="cursor-pointer" (click)="showSetting()">
+                                        <svg width="32" height="33" fill="none" stroke="#000"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.89 11.166 9.334 16.5m0 0 5.556 5.333M9.334 16.5h13.333"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                        </svg>
+                                </div>
+                                <p class="text-lg font-semibold">Analytics</p>
+                        </div>
+
+                        <div>
+                                <p class="text-sm font-semibold whitespace-nowrap">Total Views: {{totalViews}}</p>
+                        </div>
+
+                </div>
+
+
+
+
+                <div name="header" class="p-4 cursor-pointer mt-20">
+
+                        <p class="text-lg font-semibold text-center mb-10">Dialy Views</p>
+
+                        <canvas baseChart class="chart w-full" [data]="barChartData1" [options]="barChartOptions"
+                                [plugins]="barChartPlugins" [type]="barChartType" (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)">
+                        </canvas>
+
+                </div>
+                <div class="p-4 mt-20">
+
+                        <p class="text-lg font-semibold text-center mb-10">Views by Countries</p>
+
+                        <table class="w-full">
+                                <thead>
+                                        <!-- <tr>
+                                                <th>index</th>
+                                                <th>Flag</th>
+                                                <th>Country Name</th>
+                                                <th>Views</th>
+                                        </tr> -->
+                                </thead>
+                                <tbody *ngFor="let item of countriesData;index as i">
+
+                                        <tr class="border-gray-200 border-b-[0.5px]">
+                                                
+                                                <td class="p-3">
+                                                        <div class="w-10 flex gap-2">
+                                                                <img class="w-7" *ngIf="item" [src]="item.flags.svg"
+                                                                        alt="Country Flag" />
+
+                                                                <div class="text-center">
+                                                                        {{item.name.common}}
+                                                                </div>
+                                                        </div>
+                                                </td>
+                                                <td class="p-3 text-center flex items-center justify-end gap-2">
+
+                                                        <img class="w-4 h-3" src="assets/Pictures/see password.png"
+                                                        alt="" />
+                                                        {{item.views}}
+                                                </td>
+                                        </tr>
+
+                                        
+                                </tbody>
+
+                        </table>
+
+                </div>
+
+
+                <div>
+
+
+                </div>
+
+
+
+
+        </div>
+</div>

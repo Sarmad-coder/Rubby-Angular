@@ -1,0 +1,248 @@
+<!-- wherver you want to reaply the sideBar the first div with class lg:h-full covers the whole page  -->
+
+<!-- <div class="flex lg:h-full"></div> -->
+<!-- sideBar  -->
+<!-- <div *ngIf="edit" class="hidden w-28 flex-col items-center border-[3px] border-gray-200 py-7 lg:flex min-h-screen">
+        <div class="text-base font-semibold text-neutral-800">RUUBY</div>
+        <div class="mt-24 flex flex-col gap-6">
+            <div routerLink="/onboarding"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                1
+            </div>
+
+            <div routerLink="/onboarding/onboarding-1.2"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                2
+            </div>
+
+
+            <div routerLink="/onboarding/contact"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                3
+            </div>
+
+
+            <div routerLink="/onboarding/work"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                4
+            </div>
+            <div routerLink="/onboarding/education"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                5
+            </div>
+            <div routerLink="/onboarding/media"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full bg-[#63C076] font-semibold text-white">
+                6
+            </div>
+            <div routerLink="/onboarding/onboarding-1.3"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                7
+            </div>
+            <div routerLink="/onboarding/onboarding-1.4"
+                class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                8
+            </div>
+
+
+        </div>
+        <div></div>
+    </div>
+    <div *ngIf="!edit" class="hidden w-28 flex-col items-center border-[3px] border-gray-200 py-7 lg:flex min-h-screen">
+        <div class="text-base font-semibold text-neutral-800">RUUBY</div>
+        <div class="mt-24 flex flex-col gap-6">
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                1
+            </div>
+
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                2
+            </div>
+
+
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                3
+            </div>
+
+
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                4
+            </div>
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                5
+            </div>
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-[#63C076] font-semibold text-white">
+                6
+            </div>
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                7
+            </div>
+            <div
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+                8
+            </div>
+
+
+        </div>
+        <div></div>
+    </div> -->
+<!-- Main page  -->
+
+<div class="mx-auto max-w-[550px] mt-4">
+    <!-- Title  -->
+    <div class="h-16 bg-slate-100 px-4 flex items-center gap-2 rounded-md shadow-sm">
+        <div class="cursor-pointer" routerLink="/onboarding/education">
+            <svg width="32" height="33" fill="none" stroke="#000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.89 11.166 9.334 16.5m0 0 5.556 5.333M9.334 16.5h13.333" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        <div class="flex flex-col justify-center">
+            <p class="text-2xl font-semibold">Media</p>
+            <p class="text-xs font-semibold text-gray-300">Enter your youtube link here</p>
+        </div>
+    </div>
+
+    <!-- input boxes  -->
+
+
+
+
+
+    <form class="sm:p-0 p-3" [formGroup]="form" (ngSubmit)=" submitForm()">
+
+
+        <!-- Video -->
+        <div class="mt-6">
+            <label class="mb-1 block font-medium text-primary dark:text-gray-100">Video</label>
+            <div class="rounded border border-gray-300 relative">
+                <p class="pl-3 text-xs font-semibold text-gray-300 absolute top-0 bottom-0 m-auto h-fit">
+                    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.1905 8.4743L10.1723 5.10982C10.0778 5.04724 9.96822 5.01153 9.8552 5.00646C9.74217 5.0014 9.62989 5.02717 9.53024 5.08105C9.43059 5.13493 9.34728 5.21491 9.28915 5.31252C9.23101 5.41013 9.20021 5.52174 9.2 5.63552V12.3645C9.20013 12.4792 9.23134 12.5917 9.29029 12.6898C9.34923 12.788 9.43368 12.8682 9.53454 12.9217C9.63359 12.9755 9.74537 13.001 9.85778 12.9954C9.97019 12.9898 10.079 12.9534 10.1723 12.8902L15.1905 9.5257C15.2767 9.46815 15.3475 9.39004 15.3964 9.29831C15.4454 9.20658 15.471 9.1041 15.471 9C15.471 8.8959 15.4454 8.79342 15.3964 8.70169C15.3475 8.60996 15.2767 8.53184 15.1905 8.4743ZM10.4545 11.1869V6.81309L13.7164 9L10.4545 11.1869ZM22.4145 2.93342C22.3236 2.57857 22.1501 2.25053 21.9083 1.97634C21.6666 1.70214 21.3635 1.48964 21.0241 1.35632C17.4591 -0.0210098 11.7405 1.84615e-05 11.5 1.84615e-05C11.2595 1.84615e-05 5.54091 -0.0210098 1.97591 1.35632C1.63649 1.48964 1.33343 1.70214 1.09168 1.97634C0.849935 2.25053 0.676428 2.57857 0.585455 2.93342C0.313636 3.9638 0 5.85631 0 9C0 12.1437 0.313636 14.0362 0.585455 15.0666C0.676428 15.4214 0.849935 15.7495 1.09168 16.0237C1.33343 16.2979 1.63649 16.5104 1.97591 16.6437C5.54091 18.021 11.2595 18 11.5 18H11.5732C12.2945 18 17.6264 17.9579 21.0241 16.6437C21.3635 16.5104 21.6666 16.2979 21.9083 16.0237C22.1501 15.7495 22.3236 15.4214 22.4145 15.0666C22.6864 14.0362 23 12.1437 23 9C23 5.85631 22.6864 3.9638 22.4145 2.93342ZM21.2018 14.7512C21.1607 14.9116 21.0824 15.06 20.9734 15.1843C20.8644 15.3085 20.7277 15.4051 20.5745 15.4661C17.2291 16.7593 11.5627 16.7383 11.5 16.7383C11.4373 16.7383 5.77091 16.7593 2.42545 15.4661C2.27228 15.4051 2.13561 15.3085 2.0266 15.1843C1.91759 15.06 1.83932 14.9116 1.79818 14.7512C1.54727 13.7839 1.25455 12.007 1.25455 9C1.25455 5.993 1.54727 4.21613 1.79818 3.24884C1.83932 3.08839 1.91759 2.93999 2.0266 2.81575C2.13561 2.6915 2.27228 2.59492 2.42545 2.53389C5.77091 1.24067 11.4373 1.2617 11.5 1.2617C11.5627 1.2617 17.2291 1.24067 20.5745 2.53389C20.7277 2.59492 20.8644 2.6915 20.9734 2.81575C21.0824 2.93999 21.1607 3.08839 21.2018 3.24884C21.4527 4.21613 21.7455 5.993 21.7455 9C21.7455 12.007 21.4527 13.7839 21.2018 14.7512Z"
+                            fill="#000000" />
+                    </svg>
+                </p>
+                <div class="" id="wInput">
+                    <input type="text" formControlName="video" placeholder="Enter a YouTube video link"
+                        class="focus:shadow-lg rounded-md pl-11 w-full h-12 text-base font-normal" />
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Video Discription -->
+        <div class="mt-6">
+            <label class="mb-1 block font-medium text-primary dark:text-gray-100">Video Discription</label>
+            <div class="rounded border border-gray-300 relative">
+                <p class="pl-3 text-xs font-semibold text-gray-300 absolute top-0 bottom-0 m-auto h-fit">
+                    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.1905 8.4743L10.1723 5.10982C10.0778 5.04724 9.96822 5.01153 9.8552 5.00646C9.74217 5.0014 9.62989 5.02717 9.53024 5.08105C9.43059 5.13493 9.34728 5.21491 9.28915 5.31252C9.23101 5.41013 9.20021 5.52174 9.2 5.63552V12.3645C9.20013 12.4792 9.23134 12.5917 9.29029 12.6898C9.34923 12.788 9.43368 12.8682 9.53454 12.9217C9.63359 12.9755 9.74537 13.001 9.85778 12.9954C9.97019 12.9898 10.079 12.9534 10.1723 12.8902L15.1905 9.5257C15.2767 9.46815 15.3475 9.39004 15.3964 9.29831C15.4454 9.20658 15.471 9.1041 15.471 9C15.471 8.8959 15.4454 8.79342 15.3964 8.70169C15.3475 8.60996 15.2767 8.53184 15.1905 8.4743ZM10.4545 11.1869V6.81309L13.7164 9L10.4545 11.1869ZM22.4145 2.93342C22.3236 2.57857 22.1501 2.25053 21.9083 1.97634C21.6666 1.70214 21.3635 1.48964 21.0241 1.35632C17.4591 -0.0210098 11.7405 1.84615e-05 11.5 1.84615e-05C11.2595 1.84615e-05 5.54091 -0.0210098 1.97591 1.35632C1.63649 1.48964 1.33343 1.70214 1.09168 1.97634C0.849935 2.25053 0.676428 2.57857 0.585455 2.93342C0.313636 3.9638 0 5.85631 0 9C0 12.1437 0.313636 14.0362 0.585455 15.0666C0.676428 15.4214 0.849935 15.7495 1.09168 16.0237C1.33343 16.2979 1.63649 16.5104 1.97591 16.6437C5.54091 18.021 11.2595 18 11.5 18H11.5732C12.2945 18 17.6264 17.9579 21.0241 16.6437C21.3635 16.5104 21.6666 16.2979 21.9083 16.0237C22.1501 15.7495 22.3236 15.4214 22.4145 15.0666C22.6864 14.0362 23 12.1437 23 9C23 5.85631 22.6864 3.9638 22.4145 2.93342ZM21.2018 14.7512C21.1607 14.9116 21.0824 15.06 20.9734 15.1843C20.8644 15.3085 20.7277 15.4051 20.5745 15.4661C17.2291 16.7593 11.5627 16.7383 11.5 16.7383C11.4373 16.7383 5.77091 16.7593 2.42545 15.4661C2.27228 15.4051 2.13561 15.3085 2.0266 15.1843C1.91759 15.06 1.83932 14.9116 1.79818 14.7512C1.54727 13.7839 1.25455 12.007 1.25455 9C1.25455 5.993 1.54727 4.21613 1.79818 3.24884C1.83932 3.08839 1.91759 2.93999 2.0266 2.81575C2.13561 2.6915 2.27228 2.59492 2.42545 2.53389C5.77091 1.24067 11.4373 1.2617 11.5 1.2617C11.5627 1.2617 17.2291 1.24067 20.5745 2.53389C20.7277 2.59492 20.8644 2.6915 20.9734 2.81575C21.0824 2.93999 21.1607 3.08839 21.2018 3.24884C21.4527 4.21613 21.7455 5.993 21.7455 9C21.7455 12.007 21.4527 13.7839 21.2018 14.7512Z"
+                            fill="#000000" />
+                    </svg>
+                </p>
+                <div class="" id="wInput">
+                    <input type="text" formControlName="videoDiscription" placeholder="Enter video discription"
+                        class="focus:shadow-lg rounded-md pl-11 w-full h-12 text-base font-normal" />
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Alert  -->
+        <div *ngIf="errorAlert" class="mt-6 rounded-lg border border-red-600 p-6 text-red-600">
+            Please fill the reqired field
+        </div>
+        <div *ngIf="loading" class="mt-6 rounded-lg border border-green-400 p-6 text-green-600">
+            added!
+        </div>
+
+        <!-- save button  -->
+        <div *ngIf="!editFromProfile" class="mt-7 flex justify-end">
+            <button class="rounded-lg bg-gray-200 py-[9px] px-14 text-xs font-semibold disabled:bg-gray-100"
+                [disabled]="loading">
+                <div class="flex justify-center gap-4">
+                    <div *ngIf="loading" role="status">
+                        <svg aria-hidden="true"
+                            class="w-4 h-4 text-gray-400 animate-spin dark:text-gray-600 fill-blue-600"
+                            viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                fill="currentColor" />
+                            <path
+                                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                fill="currentFill" />
+                        </svg>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="text-xs font-semibold">Save Changes</p>
+
+                </div>
+                <!-- Save -->
+            </button>
+        </div>
+
+        <div *ngIf="editFromProfile" class="mt-7  mb-4 flex sm:justify-end justify-center gap-4 md:flex-nowrap flex-wrap">
+
+            <!-- save and Exit  -->
+            <div class="flex justify-end">
+              <button (click)="saveExsit=true" class="rounded-lg bg-blue-500 py-[9px] px-14 text-xs font-semibold disabled:bg-blue-300"
+              [disabled]="loading">
+                <div class="flex justify-center gap-4">
+                  <div *ngIf="loading" role="status">
+                    <svg aria-hidden="true" class="w-4 h-4 text-gray-400 animate-spin dark:text-gray-600 fill-blue-600"
+                      viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor" />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill" />
+                    </svg>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <p class="text-xs font-semibold text-white">Save Changes & Exit</p>
+      
+                </div>
+                <!-- Save -->
+              </button>
+            </div>
+      
+            <!-- next  -->
+            <div class="flex justify-end">
+              <button class="rounded-lg bg-gray-200 py-[9px] px-14 text-xs font-semibold disabled:bg-gray-100"
+                [disabled]="loading">
+                <div class="flex justify-center gap-4">
+                  <div *ngIf="loading" role="status">
+                    <svg aria-hidden="true" class="w-4 h-4 text-gray-400 animate-spin dark:text-gray-600 fill-blue-600"
+                      viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor" />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill" />
+                    </svg>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <p class="text-xs font-semibold">Next</p>
+      
+                </div>
+                <!-- Save -->
+              </button>
+            </div>
+      
+            
+          </div>
+    </form>
+    <!-- share icon -->
+
+</div>

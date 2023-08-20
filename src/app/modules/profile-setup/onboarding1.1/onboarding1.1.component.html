@@ -1,0 +1,555 @@
+<!-- wherver you want to reaply the sideBar the first div with class lg:h-full covers the whole page  -->
+
+<!-- <div class="flex lg:h-full"></div> -->
+<!-- sideBar  -->
+<!-- <div *ngIf="edit"
+    class="hidden w-[122px] flex-col items-center border-[3px] border-gray-200 py-7 lg:flex min-h-screen">
+    <div class="text-base font-semibold text-neutral-800">RUUBY</div>
+    <div class="mt-24 flex flex-col gap-6">
+      <div routerLink="/onboarding"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full bg-[#63C076] font-semibold text-white">
+        1
+      </div>
+
+      <div routerLink="/onboarding/onboarding-1.2"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        2
+      </div>
+
+      <div routerLink="/onboarding/contact"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        3
+      </div>
+
+      <div routerLink="/onboarding/work"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        4
+      </div>
+      <div routerLink="/onboarding/education"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        5
+      </div>
+      <div routerLink="/onboarding/media"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        6
+      </div>
+      <div routerLink="/onboarding/onboarding-1.3"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        7
+      </div>
+      <div routerLink="/onboarding/onboarding-1.4"
+        class="cursor-pointer flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        8
+      </div>
+
+
+    </div>
+    <div></div>
+  </div>
+
+  <div *ngIf="!edit"
+    class="hidden w-[122px] flex-col items-center border-[3px] border-gray-200 py-7 lg:flex min-h-screen">
+    <div class="text-base font-semibold text-neutral-800">RUUBY</div>
+    <div class="mt-24 flex flex-col gap-6">
+      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#63C076] font-semibold text-white">
+        1
+      </div>
+
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        2
+      </div>
+
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        3
+      </div>
+
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        4
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        5
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        6
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        7
+      </div>
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 font-semibold text-neutral-800">
+        8
+      </div>
+
+
+    </div>
+    <div></div>
+  </div> -->
+<!-- Main page  -->
+<div class="mx-auto max-w-[550px] mt-4">
+
+  <!-- Title  -->
+  <div class="h-16 bg-slate-100 px-4 flex items-center gap-2 rounded-md shadow-sm">
+    <!-- <div class="cursor-pointer" routerLink="/onboarding">
+      <svg width="32" height="33" fill="none" stroke="#000" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.89 11.166 9.334 16.5m0 0 5.556 5.333M9.334 16.5h13.333" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </div> -->
+    <div class="flex flex-col justify-center">
+      <p class="text-2xl font-semibold">Profile</p>
+      <p class="text-xs font-semibold text-gray-300">Set your profile details here</p>
+    </div>
+  </div>
+
+  <!-- cards -->
+
+  <div class=" mb-12 flex-col gap-7 min-[870px]:hidden items-center hidden">
+    <div class="flex items-center">
+      <div class="rotate-[-180deg] text-center text-[40px] text-zinc-300" style="writing-mode: tb-rl">
+        FRONT
+      </div>
+
+      <div
+        class="relative flex h-[217px] w-[343px] items-center justify-center rounded-xl border border-zinc-300 bg-black p-5">
+        <!-- <img src="assets/Pictures/ryfinery.svg" alt="" /> -->
+        <img [src]="logo" alt="" className="w-2/5" />
+        <!-- <svg class="w-2/5 text-white" viewBox="0 0 331 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.709892 21.0613V26.2456H6.7024C9.57238 26.2456 11.9717 27.0253 13.9003 28.5848C15.8289 30.1443 17.3098 31.7355 18.343 33.3582L25.5065 44.6435C26.0346 45.4654 26.8382 45.8763 27.9173 45.8763H31.8434C33.198 45.8763 33.4047 45.1809 32.4633 43.79L24.6799 32.1886C23.7386 30.7766 22.8891 29.6596 22.1314 28.8377C21.3737 27.9948 19.8239 26.7724 17.482 25.1708V25.1076C21.9133 24.7704 25.3228 23.4848 27.7106 21.251C30.1214 19.0171 31.3268 16.2563 31.3268 12.9687C31.3268 9.23858 29.8344 6.23549 26.8496 3.95946C23.8878 1.68342 19.0892 0.54541 12.4538 0.54541H0.710151C0.714999 0.763 0.717982 0.88444 0.719638 0.946904C0.716499 0.865734 0.710151 0.785655 0.710151 1.36729L0.710125 5.7297L0.709892 21.0613ZM0.709892 21.0613L0.710125 5.7297H12.3161C16.1044 5.7297 19.1007 6.21441 21.3048 7.18383C23.509 8.13218 24.6111 9.93403 24.6111 12.5894C24.6111 16.0667 23.4057 18.3532 20.9949 19.4491C18.5841 20.5239 15.1401 21.0613 10.663 21.0613H0.709892Z"
+              fill="white" />
+            <path
+              d="M36.3933 2.63177C35.3484 1.24086 35.6764 0.54541 37.3775 0.54541H41.4599C42.5291 0.54541 43.4039 1.06173 44.0843 2.09438L53.3427 15.9086C54.3633 17.426 55.2381 18.7537 55.9671 19.8917C56.6961 21.0086 57.4008 22.1993 58.0813 23.4638H58.2271C58.9075 22.1993 59.6122 21.0086 60.3412 19.8917C61.0702 18.7537 61.945 17.426 62.9656 15.9086L72.224 2.09438C72.9044 1.06173 73.7792 0.54541 74.8484 0.54541H78.9308C80.6319 0.54541 80.9599 1.24086 79.915 2.63177L61.6534 27.2256V44.1378C61.6534 45.2969 61.0459 45.8764 59.8309 45.8764H56.4774C55.2624 45.8764 54.6549 45.2969 54.6549 44.1378V27.2256L36.3933 2.63177Z"
+              fill="white" />
+            <path
+              d="M86.842 45.8764C85.627 45.8764 85.0195 45.2969 85.0195 44.1378V2.28405C85.0195 1.12496 85.627 0.54541 86.842 0.54541H116.549C117.886 0.54541 118.554 1.01958 118.554 1.96793V4.30719C118.554 5.25553 117.886 5.72971 116.549 5.72971H92.018V20.7136H113.414C114.751 20.7136 115.419 21.1878 115.419 22.1361V24.4754C115.419 25.4237 114.751 25.8979 113.414 25.8979H92.018V44.1378C92.018 45.2969 91.4105 45.8764 90.1955 45.8764H86.842Z"
+              fill="white" />
+            <path
+              d="M127.85 45.8764C126.635 45.8764 126.028 45.2969 126.028 44.1378V2.28405C126.028 1.12496 126.635 0.54541 127.85 0.54541H131.204C132.419 0.54541 133.026 1.12496 133.026 2.28405V44.1378C133.026 45.2969 132.419 45.8764 131.204 45.8764H127.85Z"
+              fill="white" />
+            <path
+              d="M145.749 45.8764C144.534 45.8764 143.926 45.2969 143.926 44.1378V2.28405C143.926 1.12496 144.534 0.54541 145.749 0.54541H150.414C152.115 0.54541 153.33 1.07227 154.059 2.12599L176.877 35.2865H177.023C176.974 34.4436 176.95 33.6006 176.95 32.7576V2.28405C176.95 1.12496 177.558 0.54541 178.773 0.54541H182.126C183.341 0.54541 183.949 1.12496 183.949 2.28405V44.1378C183.949 45.2969 183.341 45.8764 182.126 45.8764H178.918C177.217 45.8764 176.002 45.3495 175.273 44.2958L150.998 9.11215H150.852C150.9 9.95512 150.925 10.7981 150.925 11.6411V44.1378C150.925 45.2969 150.317 45.8764 149.102 45.8764H145.749Z"
+              fill="white" />
+            <path
+              d="M196.671 45.8764C195.456 45.8764 194.849 45.2969 194.849 44.1378V2.28405C194.849 1.12496 195.456 0.54541 196.671 0.54541H228.565C229.902 0.54541 230.57 1.01958 230.57 1.96793V4.30719C230.57 5.25553 229.902 5.72971 228.565 5.72971H201.847V19.7652H226.378C227.715 19.7652 228.383 20.2394 228.383 21.1878V23.527C228.383 24.4754 227.715 24.9495 226.378 24.9495H201.847V40.6921H229.659C230.995 40.6921 231.664 41.1663 231.664 42.1146V44.4539C231.664 45.4022 230.995 45.8764 229.659 45.8764H196.671Z"
+              fill="white" />
+            <path
+              d="M241.47 45.8764C240.255 45.8764 239.648 45.2969 239.648 44.1378V2.28405C239.648 1.12496 240.255 0.54541 241.47 0.54541H259.076C266.098 0.54541 271.177 1.68343 274.312 3.95946C277.471 6.23549 279.05 9.23859 279.05 12.9688C279.05 16.2564 277.775 19.0171 275.223 21.251C272.696 23.4849 269.087 24.7704 264.397 25.1076V25.1708C266.876 26.7725 268.516 27.9948 269.318 28.8378C270.12 29.6597 271.019 30.7766 272.016 32.1886L280.253 43.79C281.25 45.181 281.031 45.8764 279.597 45.8764H275.442C274.3 45.8764 273.449 45.4655 272.89 44.6436L265.309 33.3582C264.215 31.7355 262.648 30.1444 260.607 28.5849C258.565 27.0254 256.026 26.2456 252.988 26.2456H246.646V44.1378C246.646 45.2969 246.039 45.8764 244.824 45.8764H241.47ZM246.646 21.0613H257.18C261.919 21.0613 265.564 20.5239 268.115 19.4491C270.667 18.3533 271.943 16.0667 271.943 12.5894C271.943 9.93405 270.776 8.13219 268.443 7.18384C266.111 6.21442 262.939 5.72971 258.93 5.72971H246.646V21.0613Z"
+              fill="white" />
+            <path
+              d="M286.306 2.63177C285.261 1.24086 285.589 0.54541 287.29 0.54541H291.372C292.441 0.54541 293.316 1.06173 293.997 2.09438L303.255 15.9086C304.276 17.426 305.15 18.7537 305.879 19.8917C306.608 21.0086 307.313 22.1993 307.993 23.4638H308.139C308.82 22.1993 309.524 21.0086 310.253 19.8917C310.982 18.7537 311.857 17.426 312.878 15.9086L322.136 2.09438C322.817 1.06173 323.691 0.54541 324.761 0.54541H328.843C330.544 0.54541 330.872 1.24086 329.827 2.63177L311.566 27.2256V44.1378C311.566 45.2969 310.958 45.8764 309.743 45.8764H306.39C305.175 45.8764 304.567 45.2969 304.567 44.1378V27.2256L286.306 2.63177Z"
+              fill="white" />
+          </svg> -->
+
+        <div class="absolute right-4">
+          <svg class="tex w-5" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.2068 23.2765C13.8304 23.1682 13.4499 22.7225 13.372 22.2971C13.3215 22.0201 13.3864 21.8279 13.7897 21.0599C15.421 17.9568 16.1381 15.1008 16.1565 11.6346C16.1743 8.28456 15.5678 5.67803 14.0394 2.554C13.712 1.8835 13.4437 1.26076 13.4442 1.1707C13.4459 0.838325 13.729 0.356348 14.0328 0.16724C14.4497 -0.09188 15.147 -0.0433871 15.4793 0.267616C15.6063 0.387153 15.9374 0.930449 16.2135 1.47434C17.3063 3.62881 18.0506 5.99258 18.4116 8.45289C18.635 9.97548 18.6657 12.8612 18.4728 14.2551C18.1192 16.8264 17.4228 19.1207 16.3171 21.3684C15.6479 22.727 15.2309 23.286 14.8821 23.286C14.8123 23.286 14.6994 23.3032 14.6311 23.3243C14.5612 23.3451 14.3698 23.3237 14.2068 23.2765ZM9.72222 20.9405C9.14577 20.7733 8.73247 20.0686 8.9015 19.5407C8.94225 19.4129 9.21846 18.824 9.51398 18.2322C10.7636 15.7264 11.2929 13.0401 11.0546 10.4028C10.8598 8.23577 10.4752 6.86898 9.50038 4.86928C8.84705 3.52769 8.81699 3.31972 9.20426 2.77967C9.57357 2.26599 10.4853 2.18271 10.9624 2.61915C11.2932 2.9216 12.3133 5.06354 12.7061 6.2766C14.0042 10.291 13.7795 14.6004 12.0681 18.544C11.1921 20.5642 10.5802 21.1887 9.72222 20.9405ZM5.09827 18.5715C4.74144 18.4115 4.43621 18.0362 4.35511 17.658C4.30439 17.4276 4.39479 17.1726 4.8223 16.3199C6.39732 13.1877 6.42968 10.1706 4.92318 7.1113C4.26096 5.76751 4.24753 5.50013 4.81582 4.97024C5.09771 4.70877 5.21521 4.66248 5.60852 4.66248C6.266 4.66248 6.60413 4.99058 7.18549 6.1892C8.07955 8.03281 8.44062 9.6322 8.42676 11.6813C8.4126 13.7875 8.05911 15.2333 7.08407 17.1775C6.52456 18.2906 6.24992 18.5845 5.69592 18.6598C5.5266 18.6828 5.25818 18.643 5.09827 18.5715ZM0.783648 16.3648C0.50079 16.2485 0.18076 15.8658 0.0860554 15.5333C-0.0188298 15.1616 0.0703076 14.8665 0.498466 14.1725C1.04938 13.2799 1.17957 12.8009 1.18577 11.6344C1.19196 10.4679 1.06687 9.98874 0.525435 9.09612C0.341522 8.79352 0.157928 8.43093 0.115634 8.29046C-0.0563722 7.70206 0.440206 6.98115 1.10428 6.85764C1.66734 6.75284 2.0519 7.00194 2.56413 7.80303C4.04785 10.1224 4.03139 13.2208 2.52313 15.5205C1.99046 16.3319 1.39971 16.6186 0.783648 16.3648Z"
+              fill="white" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <div class="rotate-[-180deg] text-center text-[40px] text-zinc-300" style="writing-mode: tb-rl">
+        BACK
+      </div>
+      <div
+        class="grid h-[217px] w-[343px] grid-cols-3 grid-rows-3 items-center justify-center rounded-xl border border-zinc-300 bg-black p-5">
+        <div class="col-start-2 row-start-2 self-center justify-self-center bg-white">
+          <img class="w-20 rounded-lg border border-gray-200 p-1" src="assets/Pictures/qr-code.png" />
+        </div>
+        <div class="col-start-3 row-start-2 self-center justify-self-end">
+          <svg class="w-5 text-white" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.2068 23.2765C13.8304 23.1682 13.4499 22.7225 13.372 22.2971C13.3215 22.0201 13.3864 21.8279 13.7897 21.0599C15.421 17.9568 16.1381 15.1008 16.1565 11.6346C16.1743 8.28456 15.5678 5.67803 14.0394 2.554C13.712 1.8835 13.4437 1.26076 13.4442 1.1707C13.4459 0.838325 13.729 0.356348 14.0328 0.16724C14.4497 -0.09188 15.147 -0.0433871 15.4793 0.267616C15.6063 0.387153 15.9374 0.930449 16.2135 1.47434C17.3063 3.62881 18.0506 5.99258 18.4116 8.45289C18.635 9.97548 18.6657 12.8612 18.4728 14.2551C18.1192 16.8264 17.4228 19.1207 16.3171 21.3684C15.6479 22.727 15.2309 23.286 14.8821 23.286C14.8123 23.286 14.6994 23.3032 14.6311 23.3243C14.5612 23.3451 14.3698 23.3237 14.2068 23.2765ZM9.72222 20.9405C9.14577 20.7733 8.73247 20.0686 8.9015 19.5407C8.94225 19.4129 9.21846 18.824 9.51398 18.2322C10.7636 15.7264 11.2929 13.0401 11.0546 10.4028C10.8598 8.23577 10.4752 6.86898 9.50038 4.86928C8.84705 3.52769 8.81699 3.31972 9.20426 2.77967C9.57357 2.26599 10.4853 2.18271 10.9624 2.61915C11.2932 2.9216 12.3133 5.06354 12.7061 6.2766C14.0042 10.291 13.7795 14.6004 12.0681 18.544C11.1921 20.5642 10.5802 21.1887 9.72222 20.9405ZM5.09827 18.5715C4.74144 18.4115 4.43621 18.0362 4.35511 17.658C4.30439 17.4276 4.39479 17.1726 4.8223 16.3199C6.39732 13.1877 6.42968 10.1706 4.92318 7.1113C4.26096 5.76751 4.24753 5.50013 4.81582 4.97024C5.09771 4.70877 5.21521 4.66248 5.60852 4.66248C6.266 4.66248 6.60413 4.99058 7.18549 6.1892C8.07955 8.03281 8.44062 9.6322 8.42676 11.6813C8.4126 13.7875 8.05911 15.2333 7.08407 17.1775C6.52456 18.2906 6.24992 18.5845 5.69592 18.6598C5.5266 18.6828 5.25818 18.643 5.09827 18.5715ZM0.783648 16.3648C0.50079 16.2485 0.18076 15.8658 0.0860554 15.5333C-0.0188298 15.1616 0.0703076 14.8665 0.498466 14.1725C1.04938 13.2799 1.17957 12.8009 1.18577 11.6344C1.19196 10.4679 1.06687 9.98874 0.525435 9.09612C0.341522 8.79352 0.157928 8.43093 0.115634 8.29046C-0.0563722 7.70206 0.440206 6.98115 1.10428 6.85764C1.66734 6.75284 2.0519 7.00194 2.56413 7.80303C4.04785 10.1224 4.03139 13.2208 2.52313 15.5205C1.99046 16.3319 1.39971 16.6186 0.783648 16.3648Z"
+              fill="white" />
+          </svg>
+        </div>
+        <div class="col-start-2 row-start-3 flex gap-1 self-end justify-self-center">
+          <svg class="w-4 text-white [&_path]:stroke-[0.5]" viewBox="0 0 31 39" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.2564 1H20.4062M14.2564 1L15.3504 7.93068M14.2564 1L8.05158 12.1277M1 24.7742L3.04995 34.4937M1 24.7742L10.7578 14.2263L15.3504 7.93068M1 24.7742L8.05158 12.1277M1 24.7742L7.81951 28.2533M3.04995 34.4937L14.2564 37.9452M3.04995 34.4937L7.81951 28.2533M14.2564 37.9452L25.3261 34.7698M14.2564 37.9452L7.81951 28.2533M14.2564 37.9452L17.263 27.6182M14.2564 37.9452L22.0735 29.1093M25.3261 34.7698L30 25.713M25.3261 34.7698L22.0735 29.1093M30 25.713L27.0521 15.9382M30 25.713L20.4062 18.4786M30 25.713L22.0735 29.1093M20.4062 1L15.3504 7.93068M20.4062 1L24.0646 6.43962M15.3504 7.93068L18.9849 12.5419M8.05158 12.1277L10.7578 14.5024L12.5891 22.0129M12.5891 22.0129L7.81951 28.2533M12.5891 22.0129L17.263 27.6182M17.263 27.6182L20.4062 18.4786M17.263 27.6182L22.0735 29.1093M20.4062 18.4786L18.9849 12.5419M20.4062 18.4786L27.0521 15.9382M18.9849 12.5419L24.0646 6.43962M24.0646 6.43962L24.2875 6.77096L27.0521 15.9382"
+              stroke="currentColor" stroke-width="0.2" />
+          </svg>
+          <span class="text-[10px] text-white">ruuby.co</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- input boxes  -->
+
+  <div class="sm:p-0 p-3 mt-6">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <input (change)="onImgSelect($event)" [multiple]="false" id="thumbnail" accept="image/*" class="hidden"
+        type="file">
+      <label for="thumbnail">
+        <div class="flex gap-4 rounded border-2 border-dotted p-2 cursor-pointer">
+          <img *ngIf="!imgUrl&&!imgName" src="assets/Pictures/Thumbnail.png" alt="" />
+          <img class="h-10 w-10" *ngIf="imgUrl || imgName" [src]="imgUrl?imgUrl:apiUrl+'/images/thumbnails/'+imgName" />
+
+          <div class="mt-1">
+            <p class="text-sm font-semibold">Upload a thumbnail</p>
+            <p class="mt-[-3px] text-[10px] font-semibold text-gray-400">
+              2MB MAX
+            </p>
+          </div>
+        </div>
+      </label>
+      <!-- error  -->
+      <div class="text-xs text-red-600" *ngIf="imgError">Please select a image</div>
+
+      <!-- Cover Photo  -->
+      <input (change)="onCoverPhoto($event)" [multiple]="false" id="coverPhoto" accept="image/*" class="hidden"
+        type="file">
+      <label for="coverPhoto">
+        <div class="flex mt-6 gap-4 rounded border-2 border-dotted p-2 cursor-pointer">
+          <img *ngIf="!imgUrl2&&!imgName2" src="assets/Pictures/Thumbnail.png" alt="" />
+          <img class="h-10 w-10" *ngIf="imgUrl2 || imgName2" [src]="imgUrl2?imgUrl2:apiUrl+'/images/thumbnails/'+imgName2" />
+
+          <div class="mt-1">
+            <p class="text-sm font-semibold">Upload Cover Photo</p>
+            <p class="mt-[-3px] text-[10px] font-semibold text-gray-400">
+              2MB MAX
+            </p>
+          </div>
+        </div>
+      </label>
+
+      <!-- slug  -->
+      <div class="mt-6">
+        <div class="rounded border border-gray-300 relative">
+          <p class="text-black text-lg pl-3 font-semibold absolute top-0 bottom-0 m-auto h-fit">
+            @
+
+          </p>
+          <div class="" id="wInput">
+            <input [disabled]="edit" type="text" formControlName="slug" placeholder="schjertaad"
+              class="focus:shadow-lg rounded-md pl-11 w-full h-12 text-base font-normal" />
+
+          </div>
+        </div>
+        <ng-container *ngIf="error('slug') as c">
+          <div class="text-xs text-red-600" *ngIf="c.hasError('required')">Please enter a unique key.</div>
+          <div class="text-xs text-red-600" *ngIf="c.hasError('registered')">This slug is alredy use</div>
+          <div class="text-xs text-red-600" *ngIf="c.hasError('pattern')">spaces are not allowed</div>
+        </ng-container>
+      </div>
+      <!-- Name  -->
+      <div class="mt-6">
+        <label class="mb-1 block font-medium text-primary dark:text-gray-100">Name*</label>
+        <div class="rounded border border-gray-300 relative">
+          <p class="pl-3 text-xs font-semibold text-gray-300 absolute top-0 bottom-0 m-auto h-fit">
+            <svg width="16" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196 15.021 0 14.55 0 14V2C0 1.45 0.196 0.979333 0.588 0.588C0.979333 0.196 1.45 0 2 0H18C18.55 0 19.021 0.196 19.413 0.588C19.8043 0.979333 20 1.45 20 2V14C20 14.55 19.8043 15.021 19.413 15.413C19.021 15.8043 18.55 16 18 16H2ZM10 8.825C10.0833 8.825 10.1707 8.81233 10.262 8.787C10.354 8.76233 10.4417 8.725 10.525 8.675L17.6 4.25C17.7333 4.16667 17.8333 4.06267 17.9 3.938C17.9667 3.81267 18 3.675 18 3.525C18 3.19167 17.8583 2.94167 17.575 2.775C17.2917 2.60833 17 2.61667 16.7 2.8L10 7L3.3 2.8C3 2.61667 2.70833 2.61233 2.425 2.787C2.14167 2.96233 2 3.20833 2 3.525C2 3.69167 2.03333 3.83733 2.1 3.962C2.16667 4.08733 2.26667 4.18333 2.4 4.25L9.475 8.675C9.55833 8.725 9.646 8.76233 9.738 8.787C9.82933 8.81233 9.91667 8.825 10 8.825Z"
+                fill="#000000" />
+            </svg>
+          </p>
+          <div class="" id="wInput">
+            <input formControlName="name" type="text" placeholder="Salvater John"
+              class="focus:shadow-lg rounded-md pl-11 w-full h-12 text-base font-normal" />
+          </div>
+
+
+        </div>
+        <ng-container *ngIf="error('name') as c">
+          <div class="text-xs text-red-600" *ngIf="c.hasError('required')">Please enter your name.</div>
+          <!-- <div class="field-error" *ngIf="c.hasError('email')">This email is incorrect.</div> -->
+        </ng-container>
+      </div>
+
+      <!-- Email  -->
+      
+      <div class="mt-6">
+        <label class="mb-1 block font-medium text-primary dark:text-gray-100">Email*</label>
+        <div class="rounded border border-gray-300 relative">
+          <p class="pl-3 text-xs font-semibold text-gray-300 absolute top-0 bottom-0 m-auto h-fit">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8 8C6.9 8 5.95833 7.60833 5.175 6.825C4.39167 6.04167 4 5.1 4 4C4 2.9 4.39167 1.95833 5.175 1.175C5.95833 0.391667 6.9 0 8 0C9.1 0 10.0417 0.391667 10.825 1.175C11.6083 1.95833 12 2.9 12 4C12 5.1 11.6083 6.04167 10.825 6.825C10.0417 7.60833 9.1 8 8 8ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196 15.021 0 14.55 0 14V13.2C0 12.6333 0.146 12.1123 0.438 11.637C0.729334 11.1623 1.11667 10.8 1.6 10.55C2.63333 10.0333 3.68333 9.64567 4.75 9.387C5.81667 9.129 6.9 9 8 9C9.1 9 10.1833 9.129 11.25 9.387C12.3167 9.64567 13.3667 10.0333 14.4 10.55C14.8833 10.8 15.2707 11.1623 15.562 11.637C15.854 12.1123 16 12.6333 16 13.2V14C16 14.55 15.8043 15.021 15.413 15.413C15.021 15.8043 14.55 16 14 16H2Z"
+                fill="#000000" />
+            </svg>
+          </p>
+          <div class="" id="wInput">
+            <input type="text" formControlName="email" placeholder="SalvaterJohn@gmail.com"
+              class="focus:shadow-lg rounded-md pl-11 w-full h-12 text-base font-normal" />
+          </div>
+
+
+        </div>
+        <ng-container *ngIf="error('email') as c">
+          <div class="text-xs text-red-600" *ngIf="c.hasError('required')">Please enter your email.</div>
+          <div class="field-error" *ngIf="c.hasError('email')">This email is incorrect.</div>
+        </ng-container>
+      </div>
+
+      <!-- Bio  -->
+      <div class="mt-6">
+        <label class="mb-1 block font-medium text-primary dark:text-gray-100">Bio*</label>
+        <div class=" relative">
+          <p class="pl-3 text-xs font-semibold text-gray-300 absolute top-3">
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 0H8V7L5.5 5.5L3 7V0H2C0.9 0 0 0.9 0 2V18C0 19.1 0.9 20 2 20H14C15.1 20 16 19.1 16 18V2C16 1.46957 15.7893 0.960859 15.4142 0.585786C15.0391 0.210714 14.5304 0 14 0ZM13.68 16.41C13.57 16.5 12.47 17.25 12.05 17.5C11.63 17.79 10 18.72 10.26 16.92C10.89 13.28 12.11 11.12 10.65 12.06C10.27 12.29 10.05 12.43 9.91 12.5C9.78 12.61 9.79 12.6 9.68 12.41C9.57 12.22 9.53 12.23 9.67 12.13C9.67 12.13 11.9 10.34 12.72 10.28C13.5 10.21 13.31 11.17 13.24 11.61C12.78 13.46 11.94 16.15 12.07 16.54C12.18 16.93 13 16.31 13.44 16C13.44 16 13.5 15.93 13.61 16.05C13.72 16.22 13.83 16.3 13.68 16.41ZM12.97 9.06C12.4 9.06 11.94 8.6 11.94 8.03C11.94 7.46 12.4 7 12.97 7C13.54 7 14 7.46 14 8.03C14 8.6 13.54 9.06 12.97 9.06Z"
+                fill="#000000" />
+            </svg>
+          </p>
+          <div class="" id="wInput">
+            <textarea formControlName="bio"
+              class="rounded border border-gray-300 focus:shadow-lg pl-11 w-full text-base font-normal"
+              placeholder="Enter your Bio here.." name="" id="" cols="95" rows="6"></textarea>
+          </div>
+
+
+        </div>
+        <ng-container *ngIf="error('bio') as c">
+          <div class="text-xs text-red-600" *ngIf="c.hasError('required')">Please enter something about yourself.
+          </div>
+          <!-- <div class="field-error" *ngIf="c.hasError('email')">This email is incorrect.</div> -->
+        </ng-container>
+      </div>
+
+      <!-- toggle button -->
+      <div class="mt-9 flex justify-between">
+        <p class="text-base font-semibold">
+          Remove your page from discovery
+        </p>
+        <div>
+          <label class="relative inline-flex cursor-pointer items-center">
+            <input formControlName="removePageFromDiscovery" type="checkbox" value="" class="peer sr-only" />
+            <div
+              class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800">
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Alert  -->
+      <div *ngIf="errorAlert" class="mt-6 rounded-lg border border-red-600 p-6 text-red-600">
+        Please fill the reqired field
+      </div>
+      <div *ngIf="loading" class="mt-6 rounded-lg border border-green-400 p-6 text-green-600">
+        added!
+      </div>
+
+      <!-- save button  -->
+      <div *ngIf="!editFromProfile" class="mt-7 mb-4 flex justify-end">
+        <button class="rounded-lg bg-gray-200 py-[9px] px-14 text-xs font-semibold disabled:bg-gray-100"
+          [disabled]="loading">
+          <div class="flex justify-center gap-4">
+            <div *ngIf="loading" role="status">
+              <svg aria-hidden="true" class="w-4 h-4 text-gray-400 animate-spin dark:text-gray-600 fill-blue-600"
+                viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="currentColor" />
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentFill" />
+              </svg>
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p class="text-xs font-semibold">Save Changes</p>
+
+          </div>
+          <!-- Save -->
+        </button>
+      </div>
+
+      <div *ngIf="editFromProfile" class="mt-7 mb-4 flex sm:justify-end justify-center gap-4 md:flex-nowrap flex-wrap">
+
+        <!-- save and Exit  -->
+        <div class="flex justify-end">
+          <button (click)="saveExsit=true" class="rounded-lg bg-blue-500 py-[9px] px-14 text-xs font-semibold disabled:bg-blue-300"
+          [disabled]="loading">
+            <div class="flex justify-center gap-4">
+              <div *ngIf="loading" role="status">
+                <svg aria-hidden="true" class="w-4 h-4 text-gray-400 animate-spin dark:text-gray-600 fill-blue-600"
+                  viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="currentColor" />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentFill" />
+                </svg>
+                <span class="sr-only">Loading...</span>
+              </div>
+              <p class="text-xs font-semibold text-white">Save Changes & Exit</p>
+  
+            </div>
+            <!-- Save -->
+          </button>
+        </div>
+  
+        <!-- next  -->
+        <div class="flex justify-end">
+          <button class="rounded-lg bg-gray-200 py-[9px] px-14 text-xs font-semibold disabled:bg-gray-100"
+            [disabled]="loading">
+            <div class="flex justify-center gap-4">
+              <div *ngIf="loading" role="status">
+                <svg aria-hidden="true" class="w-4 h-4 text-gray-400 animate-spin dark:text-gray-600 fill-blue-600"
+                  viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="currentColor" />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentFill" />
+                </svg>
+                <span class="sr-only">Loading...</span>
+              </div>
+              <p class="text-xs font-semibold">Next</p>
+  
+            </div>
+            <!-- Save -->
+          </button>
+        </div>
+  
+        
+      </div>
+    </form>
+    <!-- share icon -->
+    <div class="hidden mt-7">
+      <p class="text-base font-semibold">Share</p>
+
+      <div class="flex gap-3 flex-wrap">
+        <!-- facebook logo  -->
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="6" fill="#3B5998" />
+          <path
+            d="M29.99 14.5959C28.9812 14.4889 27.9674 14.4369 26.953 14.4399C23.59 14.4399 21.5 16.5819 21.5 20.0299V22.3709H18.675C18.5424 22.3709 18.4152 22.4236 18.3214 22.5174C18.2277 22.6112 18.175 22.7383 18.175 22.8709V26.7209C18.175 26.8536 18.2277 26.9807 18.3214 27.0745C18.4152 27.1683 18.5424 27.2209 18.675 27.2209H21.5V34.9409C21.5 35.0736 21.5527 35.2007 21.6464 35.2945C21.7402 35.3883 21.8674 35.4409 22 35.4409H25.978C26.1106 35.4409 26.2378 35.3883 26.3315 35.2945C26.4253 35.2007 26.478 35.0736 26.478 34.9409V27.2209H29.294C29.4154 27.221 29.5326 27.1769 29.6239 27.0969C29.7152 27.0168 29.7742 26.9063 29.79 26.7859L30.287 22.9359C30.2962 22.8654 30.2903 22.7937 30.2696 22.7256C30.2489 22.6575 30.2139 22.5946 30.167 22.5411C30.12 22.4876 30.0622 22.4448 29.9974 22.4154C29.9325 22.3861 29.8622 22.3709 29.791 22.3709H26.478V20.4119C26.478 19.4419 26.673 19.0369 27.886 19.0369H29.925C30.0576 19.0369 30.1848 18.9843 30.2785 18.8905C30.3723 18.7967 30.425 18.6696 30.425 18.5369V15.0919C30.425 14.9706 30.3809 14.8533 30.3009 14.762C30.2209 14.6708 30.1103 14.6117 29.99 14.5959V14.5959ZM29.425 18.0359L27.885 18.0369C25.728 18.0369 25.478 19.3929 25.478 20.4119V22.8719C25.478 23.0044 25.5305 23.1314 25.6241 23.2251C25.7176 23.3189 25.8446 23.3717 25.977 23.3719H29.223L28.854 26.2219H25.978C25.8454 26.2219 25.7182 26.2746 25.6244 26.3684C25.5307 26.4622 25.478 26.5893 25.478 26.7219V34.4399H22.5V26.7219C22.5 26.5893 22.4473 26.4622 22.3535 26.3684C22.2598 26.2746 22.1326 26.2219 22 26.2219H19.176V23.3719H22C22.1326 23.3719 22.2598 23.3193 22.3535 23.2255C22.4473 23.1317 22.5 23.0046 22.5 22.8719V20.0299C22.5 17.1559 24.165 15.4399 26.953 15.4399C27.962 15.4399 28.873 15.4949 29.425 15.5429V18.0359V18.0359Z"
+            fill="white" />
+        </svg>
+
+        <!-- twitter logo  -->
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="6" fill="#1ABCFF" />
+          <path
+            d="M37.9343 17.3144C37.8643 17.1476 37.7465 17.0052 37.5958 16.9053C37.4452 16.8054 37.2684 16.7524 37.0877 16.753H33.6095C33.1921 16.0238 32.6127 15.4006 31.9162 14.9317C31.2196 14.4627 30.4246 14.1606 29.5927 14.0487C28.7609 13.9369 27.9144 14.0182 27.119 14.2865C26.3236 14.5548 25.6005 15.0028 25.0057 15.5959C24.485 16.1043 24.071 16.7118 23.7881 17.3827C23.5051 18.0536 23.359 18.7743 23.3582 19.5026V20.2014C18.7016 18.987 14.8917 15.2293 14.8574 15.1835C14.7377 15.0656 14.5879 14.9829 14.4245 14.9445C14.261 14.9061 14.0902 14.9135 13.9306 14.9658C13.7716 15.0165 13.6291 15.1092 13.5184 15.2342C13.4076 15.3593 13.3326 15.5119 13.3014 15.6761C12.306 21.1981 13.9649 24.8986 15.5324 27.0295C16.3186 28.107 17.2728 29.0509 18.3584 29.8249C16.6079 31.8069 13.9077 32.838 13.8849 32.8495C13.7557 32.8974 13.6391 32.9739 13.5436 33.0733C13.4481 33.1726 13.3762 33.2923 13.3333 33.4233C13.2905 33.5544 13.2777 33.6934 13.2959 33.8301C13.3141 33.9668 13.3629 34.0976 13.4386 34.2128C13.5302 34.3503 13.8734 34.7971 14.7086 35.221C15.7498 35.7365 17.1227 36 18.7817 36C26.8478 36 33.5981 29.7791 34.2846 21.771L37.7398 18.3226C37.864 18.19 37.9481 18.025 37.9826 17.8466C38.017 17.6682 38.0002 17.4837 37.9343 17.3144ZM32.7514 20.717C32.592 20.8753 32.498 21.088 32.4883 21.3127C32.0192 28.5189 26.0011 34.167 18.7817 34.167C17.5689 34.167 16.7223 34.0066 16.1273 33.8118C17.4431 33.1015 19.2737 31.8642 20.4636 30.0884C20.5326 29.9809 20.5785 29.8602 20.5982 29.7339C20.6179 29.6077 20.611 29.4787 20.578 29.3552C20.5447 29.2305 20.4857 29.1141 20.405 29.0135C20.3242 28.9129 20.2234 28.8303 20.1089 28.7709C20.0974 28.7595 18.4041 27.8773 16.9511 25.8724C15.3036 23.604 14.6057 20.843 14.8802 17.6581C16.688 19.1474 20.1432 21.5762 24.1247 22.2407C24.2562 22.2618 24.3907 22.2544 24.519 22.2188C24.6474 22.1832 24.7665 22.1203 24.8684 22.0345C24.968 21.9472 25.0481 21.8398 25.1033 21.7194C25.1585 21.5989 25.1876 21.4681 25.1888 21.3356V19.5026C25.1905 18.6617 25.4808 17.8469 26.0112 17.1949C26.5415 16.5428 27.2796 16.0932 28.1016 15.9213C28.9237 15.7494 29.7798 15.8658 30.5263 16.2508C31.2729 16.6358 31.8646 17.2662 32.2023 18.0361C32.2752 18.1999 32.394 18.339 32.5443 18.4366C32.6945 18.5342 32.8698 18.5861 33.0489 18.5861H34.8795L32.7514 20.717Z"
+            fill="white" />
+        </svg>
+
+        <!-- whatsapp logo  -->
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="6" fill="#4DC247" />
+          <path
+            d="M32 17.9101C31.0832 16.984 29.9912 16.2497 28.7876 15.7501C27.5841 15.2505 26.2931 14.9955 24.99 15.0001C19.53 15.0001 15.08 19.4501 15.08 24.9101C15.08 26.6601 15.54 28.3601 16.4 29.8601L15 35.0001L20.25 33.6201C21.7 34.4101 23.33 34.8301 24.99 34.8301C30.45 34.8301 34.9 30.3801 34.9 24.9201C34.9 22.2701 33.87 19.7801 32 17.9101V17.9101ZM24.99 33.1501C23.51 33.1501 22.06 32.7501 20.79 32.0001L20.49 31.8201L17.37 32.6401L18.2 29.6001L18 29.2901C17.1777 27.977 16.7411 26.4593 16.74 24.9101C16.74 20.3701 20.44 16.6701 24.98 16.6701C27.18 16.6701 29.25 17.5301 30.8 19.0901C31.5675 19.854 32.1757 20.7627 32.5894 21.7635C33.0031 22.7642 33.214 23.8372 33.21 24.9201C33.23 29.4601 29.53 33.1501 24.99 33.1501V33.1501ZM29.51 26.9901C29.26 26.8701 28.04 26.2701 27.82 26.1801C27.59 26.1001 27.43 26.0601 27.26 26.3001C27.09 26.5501 26.62 27.1101 26.48 27.2701C26.34 27.4401 26.19 27.4601 25.94 27.3301C25.69 27.2101 24.89 26.9401 23.95 26.1001C23.21 25.4401 22.72 24.6301 22.57 24.3801C22.43 24.1301 22.55 24.0001 22.68 23.8701C22.79 23.7601 22.93 23.5801 23.05 23.4401C23.17 23.3001 23.22 23.1901 23.3 23.0301C23.38 22.8601 23.34 22.7201 23.28 22.6001C23.22 22.4801 22.72 21.2601 22.52 20.7601C22.32 20.2801 22.11 20.3401 21.96 20.3301H21.48C21.31 20.3301 21.05 20.3901 20.82 20.6401C20.6 20.8901 19.96 21.4901 19.96 22.7101C19.96 23.9301 20.85 25.1101 20.97 25.2701C21.09 25.4401 22.72 27.9401 25.2 29.0101C25.79 29.2701 26.25 29.4201 26.61 29.5301C27.2 29.7201 27.74 29.6901 28.17 29.6301C28.65 29.5601 29.64 29.0301 29.84 28.4501C30.05 27.8701 30.05 27.3801 29.98 27.2701C29.91 27.1601 29.76 27.1101 29.51 26.9901V26.9901Z"
+            fill="white" />
+        </svg>
+
+        <!-- in logo  -->
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="6" fill="#007BB6" />
+          <path
+            d="M19.2934 21.7045H14.982C14.8391 21.7045 14.702 21.7624 14.6009 21.8656C14.4999 21.9687 14.4431 22.1085 14.4431 22.2543V35.4502C14.4431 35.596 14.4999 35.7358 14.6009 35.839C14.702 35.9421 14.8391 36 14.982 36H19.2934C19.4363 36 19.5734 35.9421 19.6745 35.839C19.7755 35.7358 19.8323 35.596 19.8323 35.4502V22.2543C19.8323 22.1085 19.7755 21.9687 19.6745 21.8656C19.5734 21.7624 19.4363 21.7045 19.2934 21.7045ZM18.7545 34.9003H15.5209V22.8042H18.7545V34.9003ZM30.6108 21.7045C29.4413 21.7045 28.3042 22.0982 27.3772 22.8251V22.2543C27.3772 22.1085 27.3205 21.9687 27.2194 21.8656C27.1183 21.7624 26.9812 21.7045 26.8383 21.7045H22.5269C22.384 21.7045 22.2469 21.7624 22.1459 21.8656C22.0448 21.9687 21.988 22.1085 21.988 22.2543V35.4502C21.988 35.596 22.0448 35.7358 22.1459 35.839C22.2469 35.9421 22.384 36 22.5269 36H26.8383C26.9812 36 27.1183 35.9421 27.2194 35.839C27.3205 35.7358 27.3772 35.596 27.3772 35.4502V29.4021C27.3772 28.9646 27.5476 28.5451 27.8508 28.2357C28.154 27.9264 28.5652 27.7526 28.994 27.7526C29.4228 27.7526 29.834 27.9264 30.1372 28.2357C30.4404 28.5451 30.6108 28.9646 30.6108 29.4021V35.4502C30.6108 35.596 30.6676 35.7358 30.7686 35.839C30.8697 35.9421 31.0068 36 31.1497 36H35.4611C35.604 36 35.7411 35.9421 35.8422 35.839C35.9432 35.7358 36 35.596 36 35.4502V27.2028C35.9983 25.7451 35.4299 24.3476 34.4196 23.3168C33.4093 22.2861 32.0396 21.7063 30.6108 21.7045ZM34.9222 34.9003H31.6886V29.4021C31.6886 28.673 31.4047 27.9737 30.8994 27.4582C30.394 26.9426 29.7087 26.653 28.994 26.653C28.2794 26.653 27.594 26.9426 27.0886 27.4582C26.5833 27.9737 26.2994 28.673 26.2994 29.4021V34.9003H23.0659V22.8042H26.2994V24.1271C26.2994 24.2409 26.334 24.352 26.3985 24.4449C26.463 24.5379 26.5542 24.6081 26.6595 24.6459C26.7648 24.6836 26.879 24.6871 26.9863 24.6559C27.0937 24.6246 27.1888 24.5601 27.2587 24.4712C27.8122 23.7555 28.5708 23.2337 29.4288 22.9788C30.2868 22.7239 31.2014 22.7485 32.0451 23.0492C32.8887 23.3499 33.6193 23.9117 34.1351 24.6563C34.6508 25.4009 34.926 26.2911 34.9222 27.2028V34.9003ZM17.5344 14.0092C17.4077 14 17.2806 13.9993 17.1539 14.007C16.7505 13.9789 16.3458 14.0357 15.9648 14.1738C15.5839 14.3119 15.2347 14.5283 14.9391 14.8096C14.6434 15.091 14.4075 15.4312 14.246 15.8094C14.0845 16.1875 14.0008 16.5954 14.0001 17.0079C13.9968 17.4161 14.0756 17.8206 14.2318 18.1964C14.3881 18.5722 14.6183 18.9112 14.9082 19.1925C15.1981 19.4737 15.5416 19.6912 15.9174 19.8315C16.2931 19.9717 16.693 20.0317 17.0924 20.0078H17.1226C17.5087 20.0353 17.8963 19.9851 18.2633 19.8598C18.6303 19.7346 18.9696 19.5368 19.2617 19.2778C19.5538 19.0188 19.793 18.7036 19.9657 18.3503C20.1385 17.9969 20.2413 17.6124 20.2683 17.2185C20.2953 16.8246 20.2461 16.4292 20.1233 16.0547C20.0005 15.6803 19.8067 15.3342 19.5528 15.0361C19.299 14.7381 18.99 14.494 18.6437 14.3178C18.2974 14.1416 17.9204 14.0367 17.5344 14.0092ZM17.4966 18.9114C17.3722 18.9229 17.2469 18.9218 17.1226 18.9081H17.0924C16.833 18.928 16.5724 18.8925 16.3272 18.8038C16.082 18.7152 15.8576 18.5754 15.6684 18.3933C15.4791 18.2112 15.3292 17.9908 15.2281 17.7463C15.127 17.5017 15.077 17.2384 15.0813 16.973C15.0856 16.7076 15.1441 16.4461 15.253 16.2051C15.3619 15.9641 15.5189 15.7489 15.7139 15.5733C15.909 15.3976 16.1378 15.2654 16.3857 15.1851C16.6336 15.1047 16.8953 15.078 17.1539 15.1066C17.6484 15.0602 18.1408 15.2162 18.5226 15.5402C18.9044 15.8641 19.1445 16.3296 19.1899 16.8342C19.2354 17.3387 19.0825 17.841 18.765 18.2306C18.4474 18.6201 17.9912 18.865 17.4966 18.9114Z"
+            fill="white" />
+        </svg>
+
+        <!-- p logo  -->
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="6" fill="#CB2027" />
+          <path
+            d="M26.5008 14.1027C23.8692 13.7406 21.1955 14.3431 18.9734 15.7988C16.7513 17.2545 15.1309 19.4652 14.4113 22.0226C13.6918 24.58 13.9217 27.3114 15.0586 29.7125C16.1956 32.1136 18.1628 34.0222 20.597 35.0858C20.5311 34.2408 20.5915 33.3908 20.7762 32.5636C20.9797 31.6407 22.2016 26.5544 22.2016 26.5544C21.9583 26.0089 21.8367 25.417 21.8453 24.8197C21.8453 23.1863 22.7878 21.9675 23.9602 21.9675C24.1708 21.9644 24.3797 22.0068 24.5725 22.0916C24.7653 22.1765 24.9375 22.3018 25.0776 22.4592C25.2176 22.6166 25.3221 22.8023 25.384 23.0037C25.4459 23.2051 25.4637 23.4174 25.4362 23.6263C25.4362 24.6163 24.8005 26.1144 24.4683 27.5202C24.4027 27.778 24.3985 28.0476 24.4562 28.3074C24.5138 28.5671 24.6317 28.8096 24.8002 29.0154C24.9688 29.2212 25.1833 29.3846 25.4265 29.4923C25.6698 29.6 25.9349 29.649 26.2006 29.6354C28.288 29.6354 29.687 26.9614 29.687 23.8045C29.687 21.3845 28.0846 19.5718 25.1304 19.5718C24.4237 19.5443 23.7187 19.6608 23.0583 19.9141C22.3979 20.1675 21.7959 20.5524 21.2888 21.0456C20.7817 21.5388 20.3801 22.1299 20.1084 22.783C19.8367 23.4361 19.7006 24.1377 19.7083 24.845C19.6768 25.6297 19.9299 26.3993 20.421 27.012C20.5127 27.0805 20.5797 27.177 20.6119 27.2869C20.644 27.3968 20.6396 27.5142 20.5992 27.6214C20.5486 27.8238 20.421 28.3067 20.3704 28.4838C20.3599 28.5438 20.3354 28.6006 20.2989 28.6494C20.2625 28.6983 20.215 28.7379 20.1605 28.7651C20.1059 28.7923 20.0457 28.8063 19.9847 28.8059C19.9238 28.8056 19.8637 28.7909 19.8095 28.7632C18.2873 28.1538 17.5702 26.4785 17.5702 24.5657C17.5702 21.434 20.1922 17.6853 25.4384 17.6853C29.6133 17.6853 32.3893 20.7399 32.3893 24.0069C32.3893 28.3067 29.9949 31.5395 26.4568 31.5395C25.928 31.5564 25.4035 31.4397 24.9317 31.2001C24.46 30.9606 24.0562 30.6059 23.7578 30.1689C23.7578 30.1689 23.1221 32.7165 22.9968 33.1983C22.7408 34.0306 22.3632 34.8205 21.876 35.5423C22.8912 35.8503 23.9459 36.0043 25.0061 35.9999C26.4509 36.0011 27.8816 35.7172 29.2165 35.1646C30.5513 34.6119 31.7641 33.8014 32.7853 32.7793C33.8065 31.7572 34.6161 30.5438 35.1677 29.2083C35.7193 27.8729 36.0022 26.4417 36 24.9968C35.9986 22.3404 35.0363 19.7742 33.2907 17.772C31.5451 15.7698 29.1342 14.4668 26.503 14.1038L26.5008 14.1027Z"
+            fill="white" />
+        </svg>
+
+        <div class="flex items-center">
+          <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="49" height="49" rx="10" fill="#F3F3F3" />
+            <path
+              d="M15.3 16.3333V32.6667H33.7V16.3333H15.3ZM14.15 14H34.85C35.155 14 35.4475 14.1229 35.6632 14.3417C35.8788 14.5605 36 14.8572 36 15.1667V33.8333C36 34.1428 35.8788 34.4395 35.6632 34.6583C35.4475 34.8771 35.155 35 34.85 35H14.15C13.845 35 13.5525 34.8771 13.3368 34.6583C13.1212 34.4395 13 34.1428 13 33.8333V15.1667C13 14.8572 13.1212 14.5605 13.3368 14.3417C13.5525 14.1229 13.845 14 14.15 14V14ZM17.6 18.6667H21.05V30.3333H17.6V18.6667ZM22.2 18.6667H24.5V30.3333H22.2V18.6667ZM25.65 18.6667H26.8V30.3333H25.65V18.6667ZM27.95 18.6667H31.4V30.3333H27.95V18.6667Z"
+              fill="black" />
+          </svg>
+          <a href="" class="ml-3 text-sm font-medium text-gray-500 underline">
+            rio-script.xyz/@
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- cards -->
+  <div class="hidden flex-col gap-7 min-[870px]:hidden items-end">
+    <div class="flex items-center">
+      <div class="rotate-[-180deg] text-center text-[40px] text-zinc-300" style="writing-mode: tb-rl">
+        FRONT
+      </div>
+
+      <div
+        class="relative flex h-[217px] w-[343px] items-center justify-center rounded-xl border border-zinc-300 bg-black p-5">
+        <!-- <img src="assets/Pictures/ryfinery.svg" alt="" /> -->
+        <img [src]="logo" alt="" className="w-2/5" />
+        <!-- <svg class="w-2/5 text-white" viewBox="0 0 331 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.709892 21.0613V26.2456H6.7024C9.57238 26.2456 11.9717 27.0253 13.9003 28.5848C15.8289 30.1443 17.3098 31.7355 18.343 33.3582L25.5065 44.6435C26.0346 45.4654 26.8382 45.8763 27.9173 45.8763H31.8434C33.198 45.8763 33.4047 45.1809 32.4633 43.79L24.6799 32.1886C23.7386 30.7766 22.8891 29.6596 22.1314 28.8377C21.3737 27.9948 19.8239 26.7724 17.482 25.1708V25.1076C21.9133 24.7704 25.3228 23.4848 27.7106 21.251C30.1214 19.0171 31.3268 16.2563 31.3268 12.9687C31.3268 9.23858 29.8344 6.23549 26.8496 3.95946C23.8878 1.68342 19.0892 0.54541 12.4538 0.54541H0.710151C0.714999 0.763 0.717982 0.88444 0.719638 0.946904C0.716499 0.865734 0.710151 0.785655 0.710151 1.36729L0.710125 5.7297L0.709892 21.0613ZM0.709892 21.0613L0.710125 5.7297H12.3161C16.1044 5.7297 19.1007 6.21441 21.3048 7.18383C23.509 8.13218 24.6111 9.93403 24.6111 12.5894C24.6111 16.0667 23.4057 18.3532 20.9949 19.4491C18.5841 20.5239 15.1401 21.0613 10.663 21.0613H0.709892Z"
+              fill="white" />
+            <path
+              d="M36.3933 2.63177C35.3484 1.24086 35.6764 0.54541 37.3775 0.54541H41.4599C42.5291 0.54541 43.4039 1.06173 44.0843 2.09438L53.3427 15.9086C54.3633 17.426 55.2381 18.7537 55.9671 19.8917C56.6961 21.0086 57.4008 22.1993 58.0813 23.4638H58.2271C58.9075 22.1993 59.6122 21.0086 60.3412 19.8917C61.0702 18.7537 61.945 17.426 62.9656 15.9086L72.224 2.09438C72.9044 1.06173 73.7792 0.54541 74.8484 0.54541H78.9308C80.6319 0.54541 80.9599 1.24086 79.915 2.63177L61.6534 27.2256V44.1378C61.6534 45.2969 61.0459 45.8764 59.8309 45.8764H56.4774C55.2624 45.8764 54.6549 45.2969 54.6549 44.1378V27.2256L36.3933 2.63177Z"
+              fill="white" />
+            <path
+              d="M86.842 45.8764C85.627 45.8764 85.0195 45.2969 85.0195 44.1378V2.28405C85.0195 1.12496 85.627 0.54541 86.842 0.54541H116.549C117.886 0.54541 118.554 1.01958 118.554 1.96793V4.30719C118.554 5.25553 117.886 5.72971 116.549 5.72971H92.018V20.7136H113.414C114.751 20.7136 115.419 21.1878 115.419 22.1361V24.4754C115.419 25.4237 114.751 25.8979 113.414 25.8979H92.018V44.1378C92.018 45.2969 91.4105 45.8764 90.1955 45.8764H86.842Z"
+              fill="white" />
+            <path
+              d="M127.85 45.8764C126.635 45.8764 126.028 45.2969 126.028 44.1378V2.28405C126.028 1.12496 126.635 0.54541 127.85 0.54541H131.204C132.419 0.54541 133.026 1.12496 133.026 2.28405V44.1378C133.026 45.2969 132.419 45.8764 131.204 45.8764H127.85Z"
+              fill="white" />
+            <path
+              d="M145.749 45.8764C144.534 45.8764 143.926 45.2969 143.926 44.1378V2.28405C143.926 1.12496 144.534 0.54541 145.749 0.54541H150.414C152.115 0.54541 153.33 1.07227 154.059 2.12599L176.877 35.2865H177.023C176.974 34.4436 176.95 33.6006 176.95 32.7576V2.28405C176.95 1.12496 177.558 0.54541 178.773 0.54541H182.126C183.341 0.54541 183.949 1.12496 183.949 2.28405V44.1378C183.949 45.2969 183.341 45.8764 182.126 45.8764H178.918C177.217 45.8764 176.002 45.3495 175.273 44.2958L150.998 9.11215H150.852C150.9 9.95512 150.925 10.7981 150.925 11.6411V44.1378C150.925 45.2969 150.317 45.8764 149.102 45.8764H145.749Z"
+              fill="white" />
+            <path
+              d="M196.671 45.8764C195.456 45.8764 194.849 45.2969 194.849 44.1378V2.28405C194.849 1.12496 195.456 0.54541 196.671 0.54541H228.565C229.902 0.54541 230.57 1.01958 230.57 1.96793V4.30719C230.57 5.25553 229.902 5.72971 228.565 5.72971H201.847V19.7652H226.378C227.715 19.7652 228.383 20.2394 228.383 21.1878V23.527C228.383 24.4754 227.715 24.9495 226.378 24.9495H201.847V40.6921H229.659C230.995 40.6921 231.664 41.1663 231.664 42.1146V44.4539C231.664 45.4022 230.995 45.8764 229.659 45.8764H196.671Z"
+              fill="white" />
+            <path
+              d="M241.47 45.8764C240.255 45.8764 239.648 45.2969 239.648 44.1378V2.28405C239.648 1.12496 240.255 0.54541 241.47 0.54541H259.076C266.098 0.54541 271.177 1.68343 274.312 3.95946C277.471 6.23549 279.05 9.23859 279.05 12.9688C279.05 16.2564 277.775 19.0171 275.223 21.251C272.696 23.4849 269.087 24.7704 264.397 25.1076V25.1708C266.876 26.7725 268.516 27.9948 269.318 28.8378C270.12 29.6597 271.019 30.7766 272.016 32.1886L280.253 43.79C281.25 45.181 281.031 45.8764 279.597 45.8764H275.442C274.3 45.8764 273.449 45.4655 272.89 44.6436L265.309 33.3582C264.215 31.7355 262.648 30.1444 260.607 28.5849C258.565 27.0254 256.026 26.2456 252.988 26.2456H246.646V44.1378C246.646 45.2969 246.039 45.8764 244.824 45.8764H241.47ZM246.646 21.0613H257.18C261.919 21.0613 265.564 20.5239 268.115 19.4491C270.667 18.3533 271.943 16.0667 271.943 12.5894C271.943 9.93405 270.776 8.13219 268.443 7.18384C266.111 6.21442 262.939 5.72971 258.93 5.72971H246.646V21.0613Z"
+              fill="white" />
+            <path
+              d="M286.306 2.63177C285.261 1.24086 285.589 0.54541 287.29 0.54541H291.372C292.441 0.54541 293.316 1.06173 293.997 2.09438L303.255 15.9086C304.276 17.426 305.15 18.7537 305.879 19.8917C306.608 21.0086 307.313 22.1993 307.993 23.4638H308.139C308.82 22.1993 309.524 21.0086 310.253 19.8917C310.982 18.7537 311.857 17.426 312.878 15.9086L322.136 2.09438C322.817 1.06173 323.691 0.54541 324.761 0.54541H328.843C330.544 0.54541 330.872 1.24086 329.827 2.63177L311.566 27.2256V44.1378C311.566 45.2969 310.958 45.8764 309.743 45.8764H306.39C305.175 45.8764 304.567 45.2969 304.567 44.1378V27.2256L286.306 2.63177Z"
+              fill="white" />
+          </svg> -->
+
+        <div class="absolute right-4">
+          <svg class="tex w-5" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.2068 23.2765C13.8304 23.1682 13.4499 22.7225 13.372 22.2971C13.3215 22.0201 13.3864 21.8279 13.7897 21.0599C15.421 17.9568 16.1381 15.1008 16.1565 11.6346C16.1743 8.28456 15.5678 5.67803 14.0394 2.554C13.712 1.8835 13.4437 1.26076 13.4442 1.1707C13.4459 0.838325 13.729 0.356348 14.0328 0.16724C14.4497 -0.09188 15.147 -0.0433871 15.4793 0.267616C15.6063 0.387153 15.9374 0.930449 16.2135 1.47434C17.3063 3.62881 18.0506 5.99258 18.4116 8.45289C18.635 9.97548 18.6657 12.8612 18.4728 14.2551C18.1192 16.8264 17.4228 19.1207 16.3171 21.3684C15.6479 22.727 15.2309 23.286 14.8821 23.286C14.8123 23.286 14.6994 23.3032 14.6311 23.3243C14.5612 23.3451 14.3698 23.3237 14.2068 23.2765ZM9.72222 20.9405C9.14577 20.7733 8.73247 20.0686 8.9015 19.5407C8.94225 19.4129 9.21846 18.824 9.51398 18.2322C10.7636 15.7264 11.2929 13.0401 11.0546 10.4028C10.8598 8.23577 10.4752 6.86898 9.50038 4.86928C8.84705 3.52769 8.81699 3.31972 9.20426 2.77967C9.57357 2.26599 10.4853 2.18271 10.9624 2.61915C11.2932 2.9216 12.3133 5.06354 12.7061 6.2766C14.0042 10.291 13.7795 14.6004 12.0681 18.544C11.1921 20.5642 10.5802 21.1887 9.72222 20.9405ZM5.09827 18.5715C4.74144 18.4115 4.43621 18.0362 4.35511 17.658C4.30439 17.4276 4.39479 17.1726 4.8223 16.3199C6.39732 13.1877 6.42968 10.1706 4.92318 7.1113C4.26096 5.76751 4.24753 5.50013 4.81582 4.97024C5.09771 4.70877 5.21521 4.66248 5.60852 4.66248C6.266 4.66248 6.60413 4.99058 7.18549 6.1892C8.07955 8.03281 8.44062 9.6322 8.42676 11.6813C8.4126 13.7875 8.05911 15.2333 7.08407 17.1775C6.52456 18.2906 6.24992 18.5845 5.69592 18.6598C5.5266 18.6828 5.25818 18.643 5.09827 18.5715ZM0.783648 16.3648C0.50079 16.2485 0.18076 15.8658 0.0860554 15.5333C-0.0188298 15.1616 0.0703076 14.8665 0.498466 14.1725C1.04938 13.2799 1.17957 12.8009 1.18577 11.6344C1.19196 10.4679 1.06687 9.98874 0.525435 9.09612C0.341522 8.79352 0.157928 8.43093 0.115634 8.29046C-0.0563722 7.70206 0.440206 6.98115 1.10428 6.85764C1.66734 6.75284 2.0519 7.00194 2.56413 7.80303C4.04785 10.1224 4.03139 13.2208 2.52313 15.5205C1.99046 16.3319 1.39971 16.6186 0.783648 16.3648Z"
+              fill="white" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <div class="rotate-[-180deg] text-center text-[40px] text-zinc-300" style="writing-mode: tb-rl">
+        BACK
+      </div>
+      <div
+        class="grid h-[217px] w-[343px] grid-cols-3 grid-rows-3 items-center justify-center rounded-xl border border-zinc-300 bg-black p-5">
+        <div class="col-start-2 row-start-2 self-center justify-self-center bg-white">
+          <img class="w-20 rounded-lg border border-gray-200 p-1" src="assets/Pictures/qr-code.png" />
+        </div>
+        <div class="col-start-3 row-start-2 self-center justify-self-end">
+          <svg class="w-5 text-white" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.2068 23.2765C13.8304 23.1682 13.4499 22.7225 13.372 22.2971C13.3215 22.0201 13.3864 21.8279 13.7897 21.0599C15.421 17.9568 16.1381 15.1008 16.1565 11.6346C16.1743 8.28456 15.5678 5.67803 14.0394 2.554C13.712 1.8835 13.4437 1.26076 13.4442 1.1707C13.4459 0.838325 13.729 0.356348 14.0328 0.16724C14.4497 -0.09188 15.147 -0.0433871 15.4793 0.267616C15.6063 0.387153 15.9374 0.930449 16.2135 1.47434C17.3063 3.62881 18.0506 5.99258 18.4116 8.45289C18.635 9.97548 18.6657 12.8612 18.4728 14.2551C18.1192 16.8264 17.4228 19.1207 16.3171 21.3684C15.6479 22.727 15.2309 23.286 14.8821 23.286C14.8123 23.286 14.6994 23.3032 14.6311 23.3243C14.5612 23.3451 14.3698 23.3237 14.2068 23.2765ZM9.72222 20.9405C9.14577 20.7733 8.73247 20.0686 8.9015 19.5407C8.94225 19.4129 9.21846 18.824 9.51398 18.2322C10.7636 15.7264 11.2929 13.0401 11.0546 10.4028C10.8598 8.23577 10.4752 6.86898 9.50038 4.86928C8.84705 3.52769 8.81699 3.31972 9.20426 2.77967C9.57357 2.26599 10.4853 2.18271 10.9624 2.61915C11.2932 2.9216 12.3133 5.06354 12.7061 6.2766C14.0042 10.291 13.7795 14.6004 12.0681 18.544C11.1921 20.5642 10.5802 21.1887 9.72222 20.9405ZM5.09827 18.5715C4.74144 18.4115 4.43621 18.0362 4.35511 17.658C4.30439 17.4276 4.39479 17.1726 4.8223 16.3199C6.39732 13.1877 6.42968 10.1706 4.92318 7.1113C4.26096 5.76751 4.24753 5.50013 4.81582 4.97024C5.09771 4.70877 5.21521 4.66248 5.60852 4.66248C6.266 4.66248 6.60413 4.99058 7.18549 6.1892C8.07955 8.03281 8.44062 9.6322 8.42676 11.6813C8.4126 13.7875 8.05911 15.2333 7.08407 17.1775C6.52456 18.2906 6.24992 18.5845 5.69592 18.6598C5.5266 18.6828 5.25818 18.643 5.09827 18.5715ZM0.783648 16.3648C0.50079 16.2485 0.18076 15.8658 0.0860554 15.5333C-0.0188298 15.1616 0.0703076 14.8665 0.498466 14.1725C1.04938 13.2799 1.17957 12.8009 1.18577 11.6344C1.19196 10.4679 1.06687 9.98874 0.525435 9.09612C0.341522 8.79352 0.157928 8.43093 0.115634 8.29046C-0.0563722 7.70206 0.440206 6.98115 1.10428 6.85764C1.66734 6.75284 2.0519 7.00194 2.56413 7.80303C4.04785 10.1224 4.03139 13.2208 2.52313 15.5205C1.99046 16.3319 1.39971 16.6186 0.783648 16.3648Z"
+              fill="white" />
+          </svg>
+        </div>
+        <div class="col-start-2 row-start-3 flex gap-1 self-end justify-self-center">
+          <svg class="w-4 text-white [&_path]:stroke-[0.5]" viewBox="0 0 31 39" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.2564 1H20.4062M14.2564 1L15.3504 7.93068M14.2564 1L8.05158 12.1277M1 24.7742L3.04995 34.4937M1 24.7742L10.7578 14.2263L15.3504 7.93068M1 24.7742L8.05158 12.1277M1 24.7742L7.81951 28.2533M3.04995 34.4937L14.2564 37.9452M3.04995 34.4937L7.81951 28.2533M14.2564 37.9452L25.3261 34.7698M14.2564 37.9452L7.81951 28.2533M14.2564 37.9452L17.263 27.6182M14.2564 37.9452L22.0735 29.1093M25.3261 34.7698L30 25.713M25.3261 34.7698L22.0735 29.1093M30 25.713L27.0521 15.9382M30 25.713L20.4062 18.4786M30 25.713L22.0735 29.1093M20.4062 1L15.3504 7.93068M20.4062 1L24.0646 6.43962M15.3504 7.93068L18.9849 12.5419M8.05158 12.1277L10.7578 14.5024L12.5891 22.0129M12.5891 22.0129L7.81951 28.2533M12.5891 22.0129L17.263 27.6182M17.263 27.6182L20.4062 18.4786M17.263 27.6182L22.0735 29.1093M20.4062 18.4786L18.9849 12.5419M20.4062 18.4786L27.0521 15.9382M18.9849 12.5419L24.0646 6.43962M24.0646 6.43962L24.2875 6.77096L27.0521 15.9382"
+              stroke="currentColor" stroke-width="0.2" />
+          </svg>
+          <span class="text-[10px] text-white">ruuby.co</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

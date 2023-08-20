@@ -1,0 +1,28 @@
+<!-- logo  -->
+<div class="m-5 ml-10">
+    <img class="ml-3 h-9 w-7 sm:inline-block" src="assets/Pictures/big logo.png" alt="" />
+    <h3 class="ml-2 text-sm font-normal sm:inline-block">RUUBY</h3>
+</div>
+
+<!-- header  -->
+<div class="mt-5 ml-10">
+    <!-- <button (click)="isAnimated=isAnimated?false:true">Animate</button>
+    <div [ngClass]="{'animate__animated animate__fadeInLeft': isAnimated}">Hello World!</div>
+    <div class="animate__animated animate__fadeInLeft animate__faster absolute" [style]="isAnimated?'display:block':'display: none'">Hello World!</div> -->
+
+    <h2 class="font-semibold text-3xl animate__animated animate__fadeIn">Profiles</h2>
+    <h5 class=" font-medium text-sm text-gray-500 animate__animated animate__fadeIn">Please Choose a profile</h5>
+</div>
+<div class="sm:mt-28 flex flex-wrap mt-12 gap-10 h-fit justify-center">
+    <ng-container *ngFor="let item of profiles">
+        <div>
+            <div (click)="selectProfile(item._id)"
+                class="border-4 border-gray-300 h-32 w-32 overflow-hidden rounded-full cursor-pointer">
+                <img class="h-full w-full object-cover"
+                    [src]="apiUrl+'/images/thumbnails/'+item.thumbnail" alt="" />
+
+            </div>
+            <h4 class=" font-medium text-base mt-5 text-center">{{item.name}}</h4>
+        </div>
+    </ng-container>
+</div>

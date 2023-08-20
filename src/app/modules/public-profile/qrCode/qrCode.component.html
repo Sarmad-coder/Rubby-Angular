@@ -1,0 +1,6 @@
+<!-- <h1>gjgjfgjfh</h1> -->
+<!-- <div class="w-52 h-52 bg-black"></div> -->
+<div *ngIf="profile" class="qrCodeBox">
+    <qrcode cssClass="qrcode" [margin]="2" [width]="300" [errorCorrectionLevel]="'M'" colorDark="#000000ff" [qrdata]="url"></qrcode>
+</div>
+<!-- <button (click)="ref.close(true)">Close</button> -->

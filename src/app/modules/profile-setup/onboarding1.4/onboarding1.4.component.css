@@ -1,0 +1,15 @@
+.box.selected {
+    border-color: rgba(53, 181, 5, 1);
+  }
+
+  #thumbsUp {
+
+
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 171.52%;
+  }
